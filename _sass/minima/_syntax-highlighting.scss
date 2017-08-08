@@ -5,6 +5,7 @@
   background: #fff;
   color: #111;
   @extend %vertical-rhythm;
+  border-radius: 3px;
 
   .highlighter-rouge & {
     background: #eef;

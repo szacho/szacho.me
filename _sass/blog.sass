@@ -1,7 +1,5 @@
 .blog__heading
-  font-size: 2rem
-  font-weight: bold
-  margin-bottom: 10px
+  +site-heading
 
 .post-item
   display: flex
@@ -18,9 +16,10 @@
     color: darken($red, 12%)
 .post-item__date
   font-size: 1.4rem
-.post-item__tags
+.post-tags
   display: flex
-.post-item__tag
+  font-weight: bold
+.post-tag
   background: darken($light-green, 25%)
   text-transform: uppercase
   color: $vanilla
