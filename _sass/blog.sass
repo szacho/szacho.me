@@ -1,0 +1,36 @@
+.blog__heading
+  font-size: 2rem
+  font-weight: bold
+  margin-bottom: 10px
+
+.post-item
+  display: flex
+  align-items: center
+  font-size: 1.5rem
+  font-weight: bold
+  *:not(:first-child)
+    margin-left: 12px
+
+.post-item__title
+  text-decoration: none
+  transition: 0.25s all
+  &:hover
+    color: darken($red, 12%)
+.post-item__date
+  font-size: 1.4rem
+.post-item__tags
+  display: flex
+.post-item__tag
+  background: darken($light-green, 25%)
+  text-transform: uppercase
+  color: $vanilla
+  border-radius: 2px
+  font-size: 0.8rem
+  padding: 3px 5.5px
+  transition: 0.25s all
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75)
+  -moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.75)
+  box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.75)
+  &:hover
+    cursor: pointer
+    background-color: darken($light-green, 15%)

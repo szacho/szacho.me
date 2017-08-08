@@ -2,21 +2,25 @@
 layout: default
 ---
 
-<div class="home">
+<div class="blog">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="blog__heading">Freaky thoughts</h1>
 
   {{ content }}
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
+      <li class="post-item">
         <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          <a class="post-item__title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="post-item__date">{{ post.date | date: date_format }}</span>
+        <ul class="post-item__tags">
+          {% for tag in post.tags %}
+          <li class="post-item__tag">{{ tag }}</li>
+          {% endfor %}
+        </ul>
       </li>
     {% endfor %}
   </ul>
