@@ -11,9 +11,14 @@ layout: default
       </time>
     </p>
     <h1 class="post__title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <ul class="post-tags">
-      {% for tag in page.tags %}
-      <li class="post-tag post-tag_in-article">{{ tag }}</li>
+    <ul class="post-categories">
+      {% if post %}
+        {% assign categories = post.categories %}
+      {% else %}
+        {% assign categories = page.categories %}
+      {% endif %}
+      {% for category in categories %}
+      <li class="post-category post-category_in-article"><a class="post-category__link" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{ category }}</a></li>
       {% endfor %}
     </ul>
   </header>

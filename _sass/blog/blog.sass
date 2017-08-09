@@ -16,20 +16,23 @@
     color: darken($red, 12%)
 .post-item__date
   font-size: 1.4rem
-.post-tags
+.post-categories
   display: flex
   font-weight: bold
-.post-tag
+.post-category
   background: darken($light-green, 25%)
-  text-transform: uppercase
-  color: $vanilla
   border-radius: 2px
-  font-size: 0.8rem
   padding: 3px 5.5px
   transition: 0.25s all
+  font-size: 0.8rem
   -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75)
   -moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.75)
   box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.75)
   &:hover
     cursor: pointer
     background-color: darken($light-green, 15%)
+.post-category__link
+  text-decoration: none
+  text-transform: uppercase
+  font-weight: bold
+  color: $vanilla
