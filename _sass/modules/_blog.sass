@@ -1,0 +1,17 @@
+
+.blog-entry
+  align-items: center
+  font-size: 1.5rem
+  font-weight: bold
+  *:not(:first-child)
+    margin-left: 12px
+
+  &--title
+    text-decoration: none
+    transition: 0.25s all
+    &:hover
+      color: darken($c-red, 12%)
+  &--date
+    font-size: 1.3rem
+  &--categories
+    font-weight: bold

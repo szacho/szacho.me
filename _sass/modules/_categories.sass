@@ -1,0 +1,36 @@
+.category
+  margin-bottom: 25px
+  padding: 0 20px
+  &--item
+    align-items: center
+  &--name
+    font-size: 1.5rem
+    font-weight: bold
+    text-transform: capitalize
+  &--link
+    text-decoration: none
+    font-size: 1.2rem
+    transition: 0.25s all
+    &:hover
+      color: darken($c-red, 12%)
+  &--tag
+    background: darken($c-green-light, 25%)
+    border-radius: 2px
+    transition: 0.25s all
+    font-size: 0.8rem
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75)
+    -moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.75)
+    box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.75)
+    &:hover
+      cursor: pointer
+      background-color: darken($c-green-light, 15%)
+    &-link
+      text-decoration: none
+      text-transform: uppercase
+      font-weight: bold
+      color: $c-vanilla
+      display: block
+      padding: 2px 5.5px
+    &-in-article
+      margin-left: 15px
+      transform: scale(1.05)

@@ -4,25 +4,25 @@ permalink: /blog/
 title: Blog
 ---
 
-<div class="blog">
+<main id="blog" class="m-wrapper">
 
-  <h1 class="blog__heading">Freaky thoughts</h1>
-  <ul class="post-list">
+  <h1 class="m-header">Freaky thoughts</h1>
+  <ul>
     {% for post in site.posts %}
-      <li class="post-item">
+      <li class="blog-entry l-flex">
         <h2>
-          <a class="post-item__title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          <a class="blog-entry--title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-item__date">{{ post.date | date: date_format }}</span>
-        <ul class="post-categories">
+        <span class="blog-entry--date">{{ post.date | date: date_format }}</span>
+        <ul class="blog-entry--categories l-flex">
           {% if post %}
             {% assign categories = post.categories %}
           {% else %}
             {% assign categories = page.categories %}
           {% endif %}
           {% for category in categories %}
-          <li class="post-category"><a class="post-category__link" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{ category }}</a></li>
+          <li class="category--tag"><a class="category--tag-link" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{ category }}</a></li>
           {% endfor %}
         </ul>
       </li>
@@ -31,4 +31,4 @@ title: Blog
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
-</div>
+</main>

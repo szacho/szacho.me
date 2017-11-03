@@ -2,7 +2,7 @@
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: $t-weight #{$t-size}/#{$t-line-height} $t-family;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -22,16 +22,13 @@ figure > img {
   display: block;
 }
 
-figcaption {
-  font-size: $small-font-size;
-}
-
 pre,
 code {
-  @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
+  @include t-relative(0.9375);
+  border: 1px solid $c-grey-light;
   border-radius: 3px;
   background-color: #eef;
+  color: $c-dark-text;
 }
 
 code {
