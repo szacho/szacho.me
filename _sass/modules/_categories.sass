@@ -1,23 +1,27 @@
 .category
   margin-bottom: 25px
   padding: 0 20px
+  font-size: 2.15rem
   &--item
     align-items: center
+    font-size: 0.85em
   &--name
-    font-size: 1.5rem
     font-weight: bold
     text-transform: capitalize
   &--link
     text-decoration: none
-    font-size: 1.2rem
     transition: 0.25s all
     &:hover
       color: darken($c-red, 12%)
+  &--entry-date
+    margin-left: 0.6em
+    font-size: 0.85em
   &--tag
+    font-size: 1.2rem
     background: darken($c-green-light, 25%)
-    border-radius: 2px
     transition: 0.25s all
-    font-size: 0.8rem
+    border-radius: 0.15em
+    margin-left: 1.15em
     -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75)
     -moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.75)
     box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.75)
@@ -30,7 +34,6 @@
       font-weight: bold
       color: $c-vanilla
       display: block
-      padding: 2px 5.5px
+      padding: 0.2em 0.45em
     &-in-article
-      margin-left: 15px
-      transform: scale(1.05)
+      font-size: 1.25rem

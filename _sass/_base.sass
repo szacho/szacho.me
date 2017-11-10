@@ -24,9 +24,12 @@ footer, header, hgroup, menu, nav, section
 	display: block
 
 body
-	line-height: 1
+	font: $t-weight #{$t-size}/#{$t-line-height} $t-family
 	background: $c-dark
 	color: $c-vanilla
+
+\:root
+	font-size: $t-size
 
 ol, ul
 	list-style: none
@@ -45,5 +48,5 @@ table
 a
 	color: $c-red
 
-@import minima/base
+
 @import minima/syntax-highlighting

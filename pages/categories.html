@@ -5,17 +5,17 @@ permalink: /categories/
 
 <main id="categories" class="m-wraper l-flex">
     {% for category in site.categories %}
-    <div class="category">
+    <ul class="category">
       {% capture category_name %}{{ category | first }}{% endcapture %}
-      <h3 class="category--name">{{ category_name }}</h3>
+      <h2 class="category--name">{{ category_name }}</h3>
       <a name="{{ category_name | slugize }}"></a>
       {% for post in site.categories[category_name] %}
-      <article class="category--item l-flex">
-        <h4><a class="category--link" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+      <li class="category--item l-flex">
+        <a class="category--link" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="blog-article--date-small">{{ post.date | date: date_format }}</span>
-      </article>
+        <span class="category--entry-date">{{ post.date | date: date_format }}</span>
+      </li>
       {% endfor %}
-    </div>
+    </ul>
     {% endfor %}
 </main>
