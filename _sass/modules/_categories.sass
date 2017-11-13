@@ -17,14 +17,19 @@
     margin-left: 0.6em
     font-size: 0.85em
   &--tag
-    font-size: 1.2rem
+    font-size: 0.525em
     background: darken($c-green-light, 25%)
     transition: 0.25s all
     border-radius: 0.15em
-    margin-left: 1.15em
     -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75)
     -moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.75)
     box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.75)
+    &-in-article
+      font-size: 0.475em
+      +mQ(600px)
+        font-size: 0.425em
+    &:not(:last-child)
+      margin-right: 1.15em
     &:hover
       cursor: pointer
       background-color: darken($c-green-light, 15%)
@@ -35,5 +40,3 @@
       color: $c-vanilla
       display: block
       padding: 0.2em 0.45em
-    &-in-article
-      font-size: 1.25rem

@@ -10,8 +10,8 @@ title: Blog
   <ul>
     {% for post in site.posts %}
       <li class="blog-entry l-flex">
-        <h2>
-          <a class="blog-entry--title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <h2 class="blog-entry--title">
+          <a class="blog-entry--link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         <span class="blog-entry--date">{{ post.date | date: date_format }}</span>
