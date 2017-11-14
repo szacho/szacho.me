@@ -5,16 +5,13 @@ layout: default
   <article class="blog-article" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="blog-article--header l-flex">
-      <div class="l-center">
-        <h1 class="blog-article--title" itemprop="name headline">{{ page.title | escape }}</h1>
-        <span class="blog-article--date">
-          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-            {{ page.date | date: date_format }}
-          </time>
-        </span>
-      </div>
-      <ul class="l-flex" >
+      <span class="blog-article--date">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+          {{ page.date | date: date_format }}
+        </time>
+      </span>
+      <ul class="l-flex blog-article--tags">
         {% if post %}
         {% assign categories = post.categories %}
         {% else %}
@@ -24,6 +21,7 @@ layout: default
         <li class="category--tag category--tag-in-article"><a class="category--tag-link" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{ category }}</a></li>
         {% endfor %}
       </ul>
+      <h1 class="blog-article--title" itemprop="name headline">{{ page.title | escape }}</h1>
     </header>
 
     <div class="blog-article--content" itemprop="articleBody">

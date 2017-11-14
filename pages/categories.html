@@ -3,7 +3,7 @@ layout: default
 permalink: /categories/
 ---
 
-<main id="categories" class="m-wraper l-flex">
+<main id="categories" class="m-wrapper l-flex">
     {% for category in site.categories %}
     <ul class="category">
       {% capture category_name %}{{ category | first }}{% endcapture %}
