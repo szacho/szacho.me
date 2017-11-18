@@ -1,7 +1,7 @@
-<header id="header" class="m-wrapper l-flex">
+<div id="navigation" class="m-wrapper l-flex">
   {% assign default_paths = site.pages | map: "path" %}
   {% assign page_paths = site.header_pages | default: default_paths %}
-  <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+  <h1><a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
 
   {% if page_paths %}
   <nav>
@@ -17,4 +17,4 @@
     </ul>
   </nav>
   {% endif %}
-</header>
+</div>
