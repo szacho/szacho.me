@@ -1,33 +1,33 @@
 ---
 layout: default
+permalink: /
 ---
-<main id="home" class="m-wrapper">
-  <section class="introduction">
-    <h2 class="m-header">Hi, I'm Michael!</h2>
-    <p>We don't know each other...</p>
-    <p>We live our lives by ourselves...</p>
-    <p>However, you are in the only place which reveals a lot about my life. Leave it now unless you want to exchange thoughts and enjoy better life, because it's too short to be small.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt iste, ex voluptatibus amet hic nam aut ratione quaerat maxime maiores doloribus magnam, magni nulla rem perspiciatis mollitia ducimus unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum commodi ducimus debitis laborum, itaque! </p>
-    <p> Optio, id blanditiis. Deserunt placeat sequi, adipisci assumenda dolor unde similique facilis, repudiandae ipsa incidunt eligendi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus itaque asperiores voluptatibus similique molestias ab provident, cum quibusdam.</p>
-  </section>
-  <section class="instagram-photos l-flex">
-    <img src="https://placeimg.com/768/432/nature" alt="">
-    <img src="https://placeimg.com/768/432/arch?t=1510848237231" alt="">
-    <img src="https://placeimg.com/768/432/animals" alt="">
-  </section>
-  <section>
-    <h2></h2>
-    <ul>
-      <li>Remote boat</li>
-      <li>Marathon</li>
-      <li>Survival winter trip</li>
-      <li>Hackathon</li>
-    </ul>
-  </section>
-  <section>
-    Project
-  </section>
-  <section>
-    social, contact
-  </section>
+
+<main id="blog" class="m-wrapper">
+
+  <h1 class="m-header">Freaky thoughts</h1>
+  <ul>
+    {% for post in site.posts %}
+      <li class="blog-entry l-flex">
+        <h2 class="blog-entry--title">
+          <a class="blog-entry--link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="blog-entry--date">{{ post.date | date: date_format }}</span>
+        <ul class="blog-entry--categories l-flex">
+          {% if post %}
+            {% assign categories = post.categories %}
+          {% else %}
+            {% assign categories = page.categories %}
+          {% endif %}
+          {% for category in categories %}
+          <li class="category--tag"><a class="category--tag-link" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{ category }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
+
 </main>

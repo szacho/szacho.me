@@ -21,3 +21,26 @@
   display: flex
   justify-content: center
   align-items: center
+
+.l-highlight
+  color: $c-highlight
+
+.l-italic
+  font-style: italic
+
+.l-link
+  transition: 0.25s all ease-out
+  text-decoration: none
+  &:hover
+    color: darken($c-red, 12%)
+
+// .l-special-link
+//   @extend .l-link
+//   color: lighten($c-highlight, 5%)
+//   &:hover
+//     color: darken($c-highlight, 2%)
+// .l-link-green
+//   @extend .l-link
+//   color: darken($c-green-light, 12%)
+//   &:hover
+//     color: darken($c-green-light, 4%)
