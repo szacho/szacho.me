@@ -1,35 +1,31 @@
 ---
 layout: default
 ---
-<main id="article" class="m-wrapper">
-  <article class="blog-article" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="blog-article" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <header class="blog-article--header l-flex">
-      <span class="blog-article--date">
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-          {{ page.date | date: date_format }}
-        </time>
-      </span>
-      <ul class="l-flex blog-article--tags">
-        {% if post %}
-        {% assign categories = post.categories %}
-        {% else %}
-        {% assign categories = page.categories %}
-        {% endif %}
-        {% for category in categories %}
-        <li class="category--tag category--tag-in-article"><a class="category--tag-link" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{ category }}</a></li>
-        {% endfor %}
-      </ul>
-      <h1 class="blog-article--title" itemprop="name headline">{{ page.title | escape }}</h1>
-    </header>
+  <header class="blog-article--header l-flex">
+    <time class="blog-article--date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      {{ page.date | date: date_format }}
+    </time>
+    <ul class="l-flex blog-article--tags">
+      {% if post %}
+      {% assign categories = post.categories %}
+      {% else %}
+      {% assign categories = page.categories %}
+      {% endif %}
+      {% for category in categories %}
+      <li class="category--tag category--tag-in-article"><a class="category--tag-link" href="{{site.baseurl}}/categories/#{{category|slugize}}" rel="tag">{{ category }}</a></li>
+      {% endfor %}
+    </ul>
+    <h1 class="blog-article--title" itemprop="name headline">{{ page.title | escape }}</h1>
+  </header>
 
-    <div class="blog-article--content" itemprop="articleBody">
-      {{ content }}
-    </div>
+  <div class="blog-article--content" itemprop="articleBody">
+    {{ content }}
+  </div>
 
-    {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-    {% endif %}
-  </article>
-</main>
+  {% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+  {% endif %}
+</article>

@@ -1,33 +1,6 @@
 ---
-layout: default
-permalink: /
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: home
 ---
-
-<main id="blog" class="m-wrapper">
-
-  <h2 class="m-header">Freaky thoughts</h1>
-  <ul>
-    {% for post in site.posts %}
-      <li class="blog-entry l-flex">
-        <h2 class="blog-entry--title">
-          <a class="blog-entry--link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="blog-entry--date">{{ post.date | date: date_format }}</span>
-        <ul class="blog-entry--categories l-flex">
-          {% if post %}
-            {% assign categories = post.categories %}
-          {% else %}
-            {% assign categories = page.categories %}
-          {% endif %}
-          {% for category in categories %}
-          <li class="category--tag"><a class="category--tag-link" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{ category }}</a></li>
-          {% endfor %}
-        </ul>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
-
-</main>

@@ -1,0 +1,20 @@
+<header id="header" class="m-wrapper l-flex">
+  {% assign default_paths = site.pages | map: "path" %}
+  {% assign page_paths = site.header_pages | default: default_paths %}
+
+  {% if page.layout == 'home' %}
+  <h1>
+    <a class="site-title" href="{{ "/" | relative_url }}" rel="index">{{ site.title | escape }}</a>
+  </h1>
+  {% else %}
+    <a class="site-title" href="{{ "/" | relative_url }}" rel="index">{{ site.title | escape }}</a>
+  {% endif %}
+
+  <nav>
+    <ul class="l-flex">
+        <li class="nav--item">
+          <a class="nav--link" href="/about/" rel="author">About</a>
+        </li>
+    </ul>
+  </nav>
+</header>

@@ -3,19 +3,18 @@ layout: default
 permalink: /categories/
 ---
 
-<main id="categories" class="m-wrapper l-flex">
-    {% for category in site.categories %}
-    <ul class="category">
-      {% capture category_name %}{{ category | first }}{% endcapture %}
-      <h2 class="category--name">{{ category_name }}</h3>
-      <a name="{{ category_name | slugize }}"></a>
-      {% for post in site.categories[category_name] %}
-      <li class="category--item l-flex">
-        <a class="category--link" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="category--entry-date">{{ post.date | date: date_format }}</span>
-      </li>
-      {% endfor %}
-    </ul>
-    {% endfor %}
-</main>
+{% for category in site.categories %}
+<ul class="category">
+  {% capture category_name %}{{ category | first }}{% endcapture %}
+  <h2 class="category--name">{{ category_name }}</h3>
+  {% for post in site.categories[category_name] %}
+  <li class="category--item l-flex">
+    <a class="category--link" href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a>
+    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+    <time class="category--entry-date" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+      {{ post.date | date: date_format }}
+    </time>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
