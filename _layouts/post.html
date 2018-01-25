@@ -24,7 +24,7 @@ layout: default
   <div class="blog-article--content" itemprop="articleBody">
     {{ content }}
   </div>
-
+  {% include share.html %}
   {% if site.disqus.shortname %}
   {% include disqus_comments.html %}
   {% endif %}

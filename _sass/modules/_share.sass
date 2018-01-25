@@ -1,0 +1,35 @@
+.share-box
+  font-size: 2rem
+  padding-top: 20px
+  +mQ(600px)
+    justify-content: space-between
+  .f, .t, .r
+    text-decoration: none
+    transition: 0.15ds all
+    color: $c-vanilla
+    width: 100px
+    height: 32px
+    margin-right: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+    +mQ(600px)
+      width: 32.5%
+      font-size: 2.1rem
+
+  .f
+    background-color: #3b5998
+    &:hover
+      background-color: darken(#3b5998, 5%)
+  .t
+    background-color: #4099FF
+    margin: 0
+    &:hover
+      background-color: darken(#4099FF, 8%)
+  .r
+    background-color: #ff5700
+    position: relative
+    top: 1px
+    height: 31px
+    &:hover
+      background-color: darken(#ff5700, 6%)
