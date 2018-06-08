@@ -9,7 +9,11 @@ permalink: /categories/
   <h2 class="category--name">{{ category_name }}</h3>
   {% for post in site.categories[category_name] %}
   <li class="category--item l-flex">
+    {% if post.steem == 1 %}
+    <a class="category--link-steem" href="{{ post.urlSteem }}" rel="bookmark">{{post.title}}</a>
+    {% else %}
     <a class="category--link" href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a>
+    {% endif %}
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     <time class="category--entry-date" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
       {{ post.date | date: date_format }}

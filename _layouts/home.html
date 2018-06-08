@@ -2,13 +2,13 @@
 layout: default
 permalink: /
 ---
-<h2 class="m-header">Freaky thoughts</h1>
+<h2 class="m-header">Exchange thoughts</h1>
 <ul>
   {% for post in site.posts %}
     {% if post.steem == 1 %}
     <li class="blog-entry l-flex">
       <h2 class="blog-entry--title">
-        <a class="blog-entry--link-steem" href="{{ post.urlSteem }}" target="_blank" rel="bookmark">{{ post.title | escape }}</a>
+        <a class="blog-entry--link-steem" href="{{ post.urlSteem }}" rel="bookmark">{{ post.title | escape }}</a>
       </h2>
       {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
       <time class="blog-entry--date" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
