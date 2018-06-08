@@ -2,8 +2,10 @@
 layout: post
 title:  "Some longy titulo para testando jekyll and other spanglish thigiys!"
 date:   2017-07-23 00:42:24 +0200
-categories: technology adventure
+categories: steemit adventure
 author: szacho
+steem: 1
+urlSteem: "https://steemit.com/"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

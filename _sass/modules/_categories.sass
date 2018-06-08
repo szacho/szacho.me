@@ -24,15 +24,21 @@
     -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75)
     -moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.75)
     box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.75)
+    &:hover
+      cursor: pointer
+      background-color: darken($c-tags, 15%)
+    &-steem
+      @extend .category--tag
+      background: darken($c-tags-steem, 8%)
+      &:hover
+        cursor: pointer
+        background-color: $c-tags-steem
     &-in-article
       font-size: 0.430em
       +mQ(600px)
         font-size: 0.425em
     &:not(:last-child)
       margin-right: 1em
-    &:hover
-      cursor: pointer
-      background-color: darken($c-tags, 15%)
     &-link
       text-decoration: none
       text-transform: uppercase
