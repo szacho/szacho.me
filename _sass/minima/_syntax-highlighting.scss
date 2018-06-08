@@ -24,10 +24,10 @@ figure > img {
 pre,
 code {
   @include t-relative(0.9375);
-  border: 1px solid $c-grey-light;
+  border: 1px solid $c-code-border;
   border-radius: 3px;
   background-color: #eef;
-  color: $c-dark-text;
+  color: $c-code;
   font-size: 1.6rem
 }
 
