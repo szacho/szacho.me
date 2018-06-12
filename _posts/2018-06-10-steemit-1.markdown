@@ -6,5 +6,6 @@ categories: adventure
 author: szacho
 steem: 1
 urlSteem: "https://steemit.com/"
+comments: false
 ---
 stemmit link

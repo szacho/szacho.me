@@ -4,6 +4,7 @@ title:  "Ahoj Sweden!"
 date:   2018-06-11 14:42:24 +0200
 categories: adventure other
 author: szacho
+comments: true
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor commodo pharetra. Suspendisse semper in neque vitae sodales. Etiam convallis vulputate mollis. Morbi ac leo quis turpis commodo sollicitudin. Sed mattis orci et elit accumsan ultrices. Donec nec odio lacinia, hendrerit ipsum ultrices, auctor felis. Donec blandit tempus lectus sollicitudin euismod. Donec euismod pharetra rutrum. Morbi sollicitudin metus orci, sit amet congue dolor convallis eu. Cras luctus vehicula metus nec congue. Donec convallis mi eget facilisis pulvinar. In accumsan gravida felis, eu eleifend sem. Donec sed orci auctor, tempor odio eu, iaculis tortor. Duis ac gravida massa. Nulla ac tempus dolor.
 
