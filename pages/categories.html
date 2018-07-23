@@ -2,14 +2,30 @@
 layout: default
 permalink: /categories/
 ---
+{% assign categories = "" | split: ',' %}
 
 {% for category in site.categories %}
-<ul class="category">
   {% capture category_name %}{{ category | first }}{% endcapture %}
-  <h2 class="category--name">{{ category_name }}</h3>
-  {% for post in site.categories[category_name] %}
+  {% assign categories = categories | push: category_name %}
+{% endfor %}
+
+{% for steemPost in site.steemit %}
+  {% for steemCategory in steemPost.categories %}
+  {% if categories contains steemCategory %}
+  {% else %}
+  {% assign categories = categories | push: steemCategory %}
+  {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% assign allPosts = site.posts | concat: site.steemit | sort: 'date' %}
+{% for category in categories %}
+<ul class="category">
+  <h2 class="category--name">{{ category }}</h3>
+  {% for post in allPosts reversed %}
+  {% if post.categories contains category %}
   <li class="category--item l-flex">
-    {% if post.steem == 1 %}
+    {% if post.steem %}
     <a class="category--link-steem" href="{{ post.urlSteem }}" rel="bookmark">{{post.title}}</a>
     {% else %}
     <a class="category--link" href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a>
@@ -19,6 +35,7 @@ permalink: /categories/
       {{ post.date | date: date_format }}
     </time>
   </li>
+  {% endif %}
   {% endfor %}
 </ul>
 {% endfor %}

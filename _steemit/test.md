@@ -1,11 +1,7 @@
 ---
-layout: post
 title:  "Example of steemit post"
 date:   2018-06-10 00:42:24 +0200
-categories: adventure
-author: szacho
-steem: 1
+categories: NewCategory
 urlSteem: "https://steemit.com/"
-comments: false
+steem: true
 ---
-stemmit link

@@ -28,6 +28,11 @@ markdown: kramdown
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+collections:
+  steemit:
+    output: false
+    steemCat: newcategory
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
