@@ -24,6 +24,7 @@ layout: default
   <div class="blog-article--content" itemprop="articleBody">
     {{ content }}
   </div>
+  {% include sharing.html %}
   {% if page.comments and jekyll.environment == "production" %}
   {% include disqus_comments.html %}
   {% endif %}

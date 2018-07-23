@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  "Ahoj Sweden!"
 date:   2018-06-11 14:42:24 +0200
 categories: adventure other
