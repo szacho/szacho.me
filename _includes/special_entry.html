@@ -1,6 +1,6 @@
 <li class="blog-entry l-flex">
   <h2 class="blog-entry--title">
-    <a class="blog-entry--link-steem" href="{{ post.urlSteem }}" rel="bookmark">{{ post.title | escape }}</a>
+    <a class="blog-entry--link-special" href="{{ post.url }}" rel="bookmark">{{ post.title | escape }}</a>
   </h2>
   {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
   <time class="blog-entry--date" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -13,7 +13,7 @@
       {% assign categories = page.categories %}
     {% endif %}
     {% for category in categories %}
-    <li class="category--tag-steem"><a class="category--tag-link" href="{{site.baseurl}}/categories/#{{category|slugize}}" rel="tag">{{ category }}</a></li>
+    <li class="category--tag-special"><a class="category--tag-link" href="{{site.baseurl}}/categories/#{{category|slugize}}" rel="tag">{{ category }}</a></li>
     {% endfor %}
   </ul>
 </li>

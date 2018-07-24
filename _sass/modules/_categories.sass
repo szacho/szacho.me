@@ -13,7 +13,7 @@
     color: $c-highlight-1
     &:hover
       color: darken($c-highlight-1, 12%)
-    &-steem
+    &-special
       @extend .category--link
       color: $c-highlight-2
       &:hover
@@ -33,12 +33,12 @@
     &:hover
       cursor: pointer
       background-color: darken($c-tags, 15%)
-    &-steem
+    &-special
       @extend .category--tag
-      background: darken($c-tags-steem, 8%)
+      background: darken($c-tags-special, 8%)
       &:hover
         cursor: pointer
-        background-color: $c-tags-steem
+        background-color: $c-tags-special
     &-in-article
       font-size: 0.430em
       +mQ(600px)

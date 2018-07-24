@@ -29,9 +29,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 collections:
-  steemit:
-    output: false
-    steemCat: newcategory
+  medium_feed:
+    output: true
+    permalink: /medium/:name
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -44,3 +44,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - README.md

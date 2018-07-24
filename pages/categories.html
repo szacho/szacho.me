@@ -9,16 +9,16 @@ permalink: /categories/
   {% assign categories = categories | push: category_name %}
 {% endfor %}
 
-{% for steemPost in site.steemit %}
-  {% for steemCategory in steemPost.categories %}
-  {% if categories contains steemCategory %}
+{% for mediumPost in site.medium_feed %}
+  {% for category in mediumPost.categories %}
+  {% if categories contains category %}
   {% else %}
-  {% assign categories = categories | push: steemCategory %}
+  {% assign categories = categories | push: category %}
   {% endif %}
   {% endfor %}
 {% endfor %}
 
-{% assign allPosts = site.posts | concat: site.steemit | sort: 'date' %}
+{% assign allPosts = site.posts | concat: site.medium_feed | sort: 'date' %}
 {% for category in categories %}
 <ul class="category">
   <h2 class="category--name">{{ category }}</h3>

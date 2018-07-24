@@ -4,14 +4,12 @@ permalink: /
 ---
 <h2 class="m-header">Exchange thoughts</h1>
 <ul>
-  {% assign allPosts = site.posts | concat: site.steemit | sort: 'date' %}
+  {% assign allPosts = site.posts | concat: site.medium_feed | sort: 'date' %}
   {% for post in allPosts reversed %}
-    {% if post.steem %}
-    {% include entrySteem.html %}
+    {% if post.isMedium %}
+      {% include special_entry.html %}
     {% else %}
-    {% include entry.html %}
+      {% include entry.html %}
     {% endif %}
   {% endfor %}
 </ul>
-
-<!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->

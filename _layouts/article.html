@@ -20,9 +20,9 @@ layout: default
     </ul>
     <h1 class="blog-article--title" itemprop="name headline">{{ page.title | escape }}</h1>
   </header>
-
   <div class="blog-article--content" itemprop="articleBody">
     {{ content }}
+    {{ page.feed_content }}
   </div>
   {% include sharing.html %}
   {% if page.comments and jekyll.environment == "production" %}

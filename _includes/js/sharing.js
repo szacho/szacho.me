@@ -30,7 +30,8 @@ function attachLink(m) {
   let node = document.querySelector(`.share-${m.name.toLowerCase()}`);
   node.setAttribute('href', m.url);
   node.setAttribute('title', `Share on ${m.name}`)
-  node.addEventListener('click', () => {
+  node.addEventListener('click', (e) => {
+    e.preventDefault();
     window.open(m.url, 'pop-up', m.windowSize);
     return false;
   });
