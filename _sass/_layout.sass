@@ -11,6 +11,8 @@
 #about
   flex-direction: column
   font-size: 1.7rem
+  a:hover
+    text-decoration: underline
 
 .l-flex
   display: flex
@@ -21,7 +23,9 @@
   align-items: center
 
 .l-highlight
-  color: $c-highlight-2
+  background-color: rgba(12,255,160,.45)
+.l-highlight:hover
+  background-color: lighten(rgba(12,255,160,.6), 10%)
 
 .l-italic
   font-style: italic

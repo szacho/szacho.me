@@ -25,10 +25,10 @@ permalink: /categories/
   {% for post in allPosts reversed %}
   {% if post.categories contains category %}
   <li class="category--item l-flex">
-    {% if post.steem %}
-    <a class="category--link-steem" href="{{ post.urlSteem }}" rel="bookmark">{{post.title}}</a>
-    {% else %}
-    <a class="category--link" href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a>
+    {% if post.isMedium %}
+      <a class="category--link-medium" href="{{ post.url }}" rel="bookmark">{{post.title}}</a>
+      {% else %}
+      <a class="category--link" href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a>
     {% endif %}
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     <time class="category--entry-date" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">

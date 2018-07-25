@@ -1,25 +1,27 @@
 .category
-  margin-bottom: 25px
+  margin-bottom: 15px
   font-size: 2.15rem
   &--item
     align-items: baseline
+    flex-wrap: wrap-reverse
     font-size: 0.85em
   &--name
     font-weight: bold
     text-transform: capitalize
   &--link
+    margin-right: 0.6em
+    line-height: 1.35
     text-decoration: none
     transition: 0.25s all
     color: $c-highlight-1
     &:hover
       color: darken($c-highlight-1, 12%)
-    &-special
+    &-medium
       @extend .category--link
       color: $c-highlight-2
       &:hover
         color: darken($c-highlight-2, 12%)
   &--entry-date
-    margin-left: 0.6em
     font-size: 0.85em
     white-space: nowrap
   &--tag
@@ -27,20 +29,20 @@
     background: darken($c-tags, 25%)
     transition: 0.25s all
     border-radius: 0.15em
-    -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75)
-    -moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.75)
-    box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.75)
+    box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75)
+    line-height: 1.4
     &:hover
       cursor: pointer
       background-color: darken($c-tags, 15%)
-    &-special
+    &-medium
       @extend .category--tag
-      background: darken($c-tags-special, 8%)
+      background: darken($c-tags-medium, 8%)
       &:hover
         cursor: pointer
-        background-color: $c-tags-special
+        background-color: $c-tags-medium
     &-in-article
       font-size: 0.430em
+      margin: .4rem 0
       +mQ(600px)
         font-size: 0.425em
     &:not(:last-child)

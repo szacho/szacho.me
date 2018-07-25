@@ -1,32 +1,87 @@
 .blog-article
-
+  $defaultMargin: .6rem
   &--header
-    flex-flow: row wrap
-    align-items: center
+    flex-flow: column wrap
     font-size: 2.6rem
     margin-bottom: 10px
-
+    &-wrapper
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
   &--title
-    font-weight: bold
+    font-weight: 700
     transition: 0.25s all
     color: $c-highlight-1
+    line-height: 1.15
+    &-medium
+      @extend .blog-article--title
+      color: $c-highlight-2
 
   &--date
     font-size: 0.65em
     font-weight: bold
     white-space: nowrap
-    width: 50%
   &--tags
-    width: 50%
-    justify-content: flex-end
+    flex-wrap: wrap
   &--content
-    font-size: 1.7rem
+    flex-direction: column
+    font-size: 1.8rem
+    h2
+      font-size: 2.4rem
+      font-weight: 700
+      margin-top: 20px
+    h3
+      font-size: 2.1rem
+      font-weight: 700
+      margin-top: 10px
     p
-      margin-bottom: 12px
+      margin: $defaultMargin 0
+      line-height: 1.4
+    strong
+      font-weight: 700
+    iframe
+      width: 100%
+      margin: $defaultMargin 0
+      +mQ(600px)
+        height: 338px
     img
-      width: 85%
+      width: 100%
       height: auto
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+      margin: $defaultMargin 0
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.5)
       border-radius: 1px
       +mQ(600px)
         width: 100%
+    blockquote
+      border-left: 3px solid $c-highlight-2
+      font-style: italic
+      position: relative
+      right: 2rem
+      padding: .3rem 0 .7rem 2rem
+    ul, ol
+      margin: $defaultMargin 0
+      margin-left: 2rem
+    ul
+      list-style-type: disc
+    ol
+      list-style-type: decimal
+    li
+      padding-left: .5rem
+      line-height: 1.35
+      margin-bottom: 5px
+    a
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+    figcaption
+      font-size: 1.4rem
+      margin-bottom: .7rem
+      text-align: center
+    hr
+      display: block
+      height: 1px
+      width: 100%
+      background-color: $c-code-border
+      border: none
+    em
+      font-style: italic

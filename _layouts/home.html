@@ -2,14 +2,13 @@
 layout: default
 permalink: /
 ---
-<h2 class="m-header">Exchange thoughts</h1>
 <ul>
-  {% assign allPosts = site.posts | concat: site.medium_feed | sort: 'date' %}
-  {% for post in allPosts reversed %}
-    {% if post.isMedium %}
-      {% include special_entry.html %}
-    {% else %}
+  {% assign allPosts = site.posts | concat: site.medium_feed | sort: 'date' | group_by_exp:"item", "item.date | date: '%Y'" %}
+
+  {% for year in allPosts reversed %}
+    <h2 class="m-header">{{ year.name }}</h2>
+    {% for post in year.items reversed %}
       {% include entry.html %}
-    {% endif %}
+    {% endfor %}
   {% endfor %}
 </ul>

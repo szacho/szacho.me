@@ -1,26 +1,31 @@
 ---
 layout: default
 ---
+{% if page.isMedium %}
+  {% assign titleClass = 'blog-article--title-medium' %}
+  {% assign categoryTagClass = 'category--tag-medium' %}
+{% else %}
+  {% assign titleClass = 'blog-article--title' %}
+  {% assign categoryTagClass = 'category--tag' %}
+{% endif %}
 <article class="blog-article" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="blog-article--header l-flex">
-    <time class="blog-article--date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-      {{ page.date | date: date_format }}
-    </time>
-    <ul class="l-flex blog-article--tags">
-      {% if post %}
-      {% assign categories = post.categories %}
-      {% else %}
-      {% assign categories = page.categories %}
-      {% endif %}
-      {% for category in categories %}
-      <li class="category--tag category--tag-in-article"><a class="category--tag-link" href="{{site.baseurl}}/categories/#{{category|slugize}}" rel="tag">{{ category }}</a></li>
-      {% endfor %}
-    </ul>
-    <h1 class="blog-article--title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <div class="l-flex blog-article--header-wrapper">
+      <time class="blog-article--date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        {{ page.date | date: date_format }}
+      </time>
+      <ul class="l-flex blog-article--tags">
+        {% assign categories = page.categories %}
+        {% for category in categories %}
+        <li class="{{ categoryTagClass }} category--tag-in-article"><a class="category--tag-link" href="{{site.baseurl}}/categories/#{{category|slugize}}" rel="tag">{{ category }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <h1 class="{{ titleClass }}" itemprop="name headline">{{ page.title | escape }}</h1>
   </header>
-  <div class="blog-article--content" itemprop="articleBody">
+  <div class="l-flex blog-article--content" itemprop="articleBody">
     {{ content }}
     {{ page.feed_content }}
   </div>
