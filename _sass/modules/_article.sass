@@ -2,8 +2,8 @@
   $defaultMargin: .6rem
   &--header
     flex-flow: column wrap
-    font-size: 2.6rem
     margin-bottom: 10px
+    font-size: 2.8rem
     &-wrapper
       justify-content: space-between
       align-items: center
@@ -12,7 +12,7 @@
     font-weight: 700
     transition: 0.25s all
     color: $c-highlight-1
-    line-height: 1.15
+    line-height: 1.25
     &-medium
       @extend .blog-article--title
       color: $c-highlight-2
@@ -25,29 +25,35 @@
     flex-wrap: wrap
   &--content
     flex-direction: column
-    font-size: 1.8rem
+    font-size: 2rem
+    line-height: 1.4em
+    hyphens: auto
+    color: $c-article-font
+    p, iframe, img, figure, pre, blockquote, ul, ol
+      margin-bottom: 1em
+    figure > img
+      margin-bottom: 0
+    h2, h3
+      color: lighten($c-article-font, 7%)
+      font-weight: 700
+      margin-bottom: .2em
     h2
       font-size: 2.4rem
-      font-weight: 700
-      margin-top: 20px
+      margin-top: 1em
     h3
       font-size: 2.1rem
-      font-weight: 700
-      margin-top: 10px
+      margin-top: .5em
     p
-      margin: $defaultMargin 0
-      line-height: 1.4
+
     strong
       font-weight: 700
     iframe
       width: 100%
-      margin: $defaultMargin 0
       +mQ(600px)
         height: 338px
     img
       width: 100%
       height: auto
-      margin: $defaultMargin 0
       box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.5)
       border-radius: 1px
       +mQ(600px)
@@ -57,9 +63,8 @@
       font-style: italic
       position: relative
       right: 2rem
-      padding: .3rem 0 .7rem 2rem
+      padding: .5rem 0 .5rem 2rem
     ul, ol
-      margin: $defaultMargin 0
       margin-left: 2rem
     ul
       list-style-type: disc
@@ -67,15 +72,14 @@
       list-style-type: decimal
     li
       padding-left: .5rem
-      line-height: 1.35
-      margin-bottom: 5px
     a
       text-decoration: none
     a:hover
       text-decoration: underline
     figcaption
-      font-size: 1.4rem
-      margin-bottom: .7rem
+      font-size: .8em
+      margin-top: .2em
+      line-height: 1.3em
       text-align: center
     hr
       display: block

@@ -24,7 +24,7 @@ module Jekyll
         categories = []
         while i <= 2 # limit categories, dev only
           if e[:categories][i]
-            categories.push(e[:categories][i].split('-').join(' '))
+            categories.push(e[:categories][i])
           end
           i += 1
         end

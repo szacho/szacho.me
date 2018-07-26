@@ -21,7 +21,7 @@ permalink: /categories/
 {% assign allPosts = site.posts | concat: site.medium_feed | sort: 'date' %}
 {% for category in categories %}
 <ul class="category">
-  <h2 class="category--name">{{ category }}</h3>
+  <h2 id="{{category}}" class="category--name">{{ category }}</h3>
   {% for post in allPosts reversed %}
   {% if post.categories contains category %}
   <li class="category--item l-flex">
