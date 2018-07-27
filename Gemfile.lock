@@ -73,6 +73,7 @@ DEPENDENCIES
   jekyll (= 3.5.1)
   jekyll-seo-tag
   jekyll-sitemap
+  nokogiri
   tzinfo-data
 
 BUNDLED WITH

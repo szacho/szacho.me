@@ -18,11 +18,6 @@ const socialMedia = [
     url: 'http://www.reddit.com/submit?url={{ site.url }}{{ site.baseurl }}{{ page.url }}',
     name: 'Reddit',
     windowSize: 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'
-  },
-  {
-    url: 'https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source={{ site.title }}',
-    name: 'LinkedIn',
-    windowSize: 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'
   }
 ];
 

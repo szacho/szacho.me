@@ -14,14 +14,22 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Think before you die
-email: whywayaway@gmail.com
 description: >
   This blog concerns versatile subjects pulling apart common notions with the skill of a surgeon.
   Furthermore, it is also a travel and adventure journal kept by backpacker, explorer and digital nomad.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://szacho.me" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  szacho
+baseurl: ""
+url: "https://szacho.me"
+lang: en
 permalink: /:title/
+
+github:
+  username: szacho
+  uri: https://github.com/szacho
+medium:
+  uri: https://medium.com/@szacho
+author:
+  name: Michał Szachniewicz
+  email: hello@szacho.me
 
 # Build settings
 markdown: kramdown

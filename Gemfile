@@ -20,4 +20,6 @@ gem "jekyll", "3.5.1"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jekyll-seo-tag'
 gem 'jekyll-sitemap'
+
 gem 'feedjira'
+gem 'nokogiri'
