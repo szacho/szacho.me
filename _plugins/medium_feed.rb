@@ -33,7 +33,7 @@ module Jekyll
     Feedjira::Feed.fetch_and_parse(feed_url).entries.each do |e|
         i = 0
         categories = []
-        while i <= 2 # limit categories, dev only
+        while i <= 2 # limit categories
           if e[:categories][i]
             categories.push(e[:categories][i])
           end

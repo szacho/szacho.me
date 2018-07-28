@@ -17,7 +17,7 @@ permalink: /feed/
       <email>{{ site.author.email | xml_escape }}</email>
     </author>
 
-    {% assign allPosts = site.posts | concat: site.medium_feed | sort: 'date' %}
+    {% assign allPosts = site.posts | concat: site.medium_feed | sort: 'date' | reverse %}
     {% for post in allPosts limit:10 %}
       <entry>
         <title type="html">{{ post.title | smartify | strip_html | normalize_whitespace | xml_escape }}</title>
