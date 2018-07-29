@@ -44,13 +44,14 @@ module Jekyll
         content = e[:content]
         date = e[:published]
         guid = e[:url]
+        author = e[:author]
 
         path = "./_medium_feed/" + title.downcase + ".md"
         path = site.in_source_dir(path)
         doc = Jekyll::Document.new(path, { :site => site, :collection => jekyll_coll })
 
-
         doc.data['title'] = title
+        doc.data['author'] = author
         doc.data['date'] = date
         doc.data['feed_content'] = formatContent(content)
         doc.data['image'] = getPostImage(content)

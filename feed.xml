@@ -13,7 +13,7 @@ permalink: /feed/
     <subtitle>{{ site.description | xml_escape }}</subtitle>
 
     <author>
-      <name>{{ site.author.name | default: site.author | xml_escape }}</name>
+      <name>{{ site.author.name | xml_escape }}</name>
       <email>{{ site.author.email | xml_escape }}</email>
     </author>
 
@@ -28,8 +28,8 @@ permalink: /feed/
         <content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}">{{ post.feed_content | default: post.content | strip | xml_escape }}</content>
 
         <author>
-          <name>{{ site.author.name | default: site.author | xml_escape }}</name>
-          <email>{{ site.author.email | xml_escape }}</email>
+          <name>{{ post.author | default: site.author.name | xml_escape }}</name>
+          <email>{{ post.email | default: site.author.email | xml_escape }}</email>
         </author>
 
         {% for cat in post.categories %}
