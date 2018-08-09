@@ -39,7 +39,7 @@ plugins:
 collections:
   medium_feed:
     output: true
-    permalink: /medium/:name
+    permalink: /medium/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

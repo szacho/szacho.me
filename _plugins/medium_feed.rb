@@ -28,7 +28,7 @@ module Jekyll
       end
     end
 
-    feed_url = "https://blog.usejournal.com/feed"
+    feed_url = "https://medium.com/feed/@RyanHoliday"
     # feed_url = "https://medium.com/feed/@szacho"
     Feedjira::Feed.fetch_and_parse(feed_url).entries.each do |e|
         i = 0
@@ -46,7 +46,7 @@ module Jekyll
         guid = e[:url]
         author = e[:author]
 
-        path = "./_medium_feed/" + title.downcase + ".md"
+        path = "./_medium_feed/" + (title.downcase.gsub! ' ', '-') + ".md"
         path = site.in_source_dir(path)
         doc = Jekyll::Document.new(path, { :site => site, :collection => jekyll_coll })
 
