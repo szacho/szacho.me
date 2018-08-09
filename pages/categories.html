@@ -9,24 +9,15 @@ permalink: /categories/
   {% assign categories = categories | push: category_name %}
 {% endfor %}
 
-{% for mediumPost in site.medium_feed %}
-  {% for category in mediumPost.categories %}
-  {% if categories contains category %}
-  {% else %}
-  {% assign categories = categories | push: category %}
-  {% endif %}
-  {% endfor %}
-{% endfor %}
-
-{% assign allPosts = site.posts | concat: site.medium_feed | sort: 'date' %}
+{% assign allPosts = site.posts | sort: 'date' %}
 {% for category in categories %}
 <ul class="category">
   <h2 id="{{category}}" class="category--name">{{ category }}</h3>
   {% for post in allPosts reversed %}
   {% if post.categories contains category %}
   <li class="category--item l-flex">
-    {% if post.isMedium %}
-      <a class="category--link-medium" href="{{ post.url }}" rel="bookmark">{{post.title}}</a>
+    {% if post.highlight %}
+      <a class="category--link-highlight" href="{{ post.url }}" rel="bookmark">{{post.title}}</a>
       {% else %}
       <a class="category--link" href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a>
     {% endif %}

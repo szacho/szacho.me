@@ -1,6 +1,6 @@
-{% if post.isMedium %}
-  {% assign entryClass = 'blog-entry--link-medium' %}
-  {% assign categoryTagClass = 'category--tag-medium' %}
+{% if post.highlight %}
+  {% assign entryClass = 'blog-entry--link-highlight' %}
+  {% assign categoryTagClass = 'category--tag-highlight' %}
 {% else %}
   {% assign entryClass = 'blog-entry--link' %}
   {% assign categoryTagClass = 'category--tag' %}

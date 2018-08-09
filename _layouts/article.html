@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-{% if page.isMedium %}
-  {% assign titleClass = 'blog-article--title-medium' %}
-  {% assign categoryTagClass = 'category--tag-medium' %}
+{% if page.highlight %}
+  {% assign titleClass = 'blog-article--title-highlight' %}
+  {% assign categoryTagClass = 'category--tag-highlight' %}
 {% else %}
   {% assign titleClass = 'blog-article--title' %}
   {% assign categoryTagClass = 'category--tag' %}
@@ -27,7 +27,6 @@ layout: default
   </header>
   <div class="l-flex blog-article--content" itemprop="articleBody">
     {{ content }}
-    {{ page.feed_content }}
   </div>
   <div class="share l-flex">
       <!-- href attribute is appended in js -->

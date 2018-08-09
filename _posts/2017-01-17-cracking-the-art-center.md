@@ -5,6 +5,7 @@ date: 2017-05-17 14:42:24 +0200
 <!-- image: noimage -->
 categories: adventure other
 comments: true
+highlight: true
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim lectus sit amet egestas cursus. Nam varius finibus volutpat. Nulla posuere eget tortor porta mattis. Morbi nibh quam, efficitur nec ultrices eu, scelerisque nec enim. Sed et mauris at mi tincidunt cursus sit amet sit amet velit. In efficitur felis sed nisi scelerisque, ut ullamcorper diam condimentum. Donec nec est ut odio convallis feugiat.
 

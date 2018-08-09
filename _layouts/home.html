@@ -3,9 +3,9 @@ layout: default
 permalink: /
 ---
 <ul>
-  {% assign allPosts = site.posts | concat: site.medium_feed | sort: 'date' | group_by_exp:"item", "item.date | date: '%Y'" %}
+  {% assign posts = site.posts | sort: 'date' | group_by_exp:"item", "item.date | date: '%Y'" %}
 
-  {% for year in allPosts reversed %}
+  {% for year in posts reversed %}
     <h2 class="m-header">{{ year.name }}</h2>
     {% for post in year.items reversed %}
       {% include entry.html %}
