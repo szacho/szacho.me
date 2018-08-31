@@ -23,3 +23,4 @@ gem 'jekyll-sitemap'
 
 gem 'feedjira'
 gem 'nokogiri'
+gem 'jekyll-responsive-image'

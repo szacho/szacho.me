@@ -2,21 +2,19 @@
   {% if jekyll.environment == "production" %}
   {% include analytics.html %}
   {% endif %}
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
   <!--[if lt IE 9]>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  {% if page.layout != "post" %}
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
-  {% endif %}
+
   <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&amp;subset=latin-ext" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "assets/index.css" | relative_url }}" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}" />
-  {% seo %}
+  <link rel="stylesheet" href="{{ "assets/index.css" | relative_url }}" >
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" >
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}" >
+  <link rel="icon" href="/favicon.ico">
+  {% seo title=false %}
 </head>

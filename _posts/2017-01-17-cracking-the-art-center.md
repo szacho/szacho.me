@@ -9,6 +9,8 @@ highlight: true
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim lectus sit amet egestas cursus. Nam varius finibus volutpat. Nulla posuere eget tortor porta mattis. Morbi nibh quam, efficitur nec ultrices eu, scelerisque nec enim. Sed et mauris at mi tincidunt cursus sit amet sit amet velit. In efficitur felis sed nisi scelerisque, ut ullamcorper diam condimentum. Donec nec est ut odio convallis feugiat.
 
+{% responsive_image path: assets/images/hammock.jpg alt: "Green hammock and a lake in background" %} 
+
 Donec id feugiat purus. Nulla luctus quis lacus non bibendum. Fusce ut malesuada justo. Nam eu massa at massa elementum egestas. Morbi velit eros, pharetra et condimentum eu, venenatis quis nulla. Phasellus quis odio id leo lobortis lobortis vitae eu mi. Pellentesque congue lorem eget efficitur tempus. Nunc faucibus dignissim ligula et consectetur. Ut aliquam, massa eu euismod pharetra, leo tortor suscipit dui, in vehicula mi massa vel mi. Duis et neque aliquam massa accumsan scelerisque sed eget mi. Donec vel orci eu dolor placerat posuere a egestas ligula. Donec tincidunt fringilla libero ut sodales. Nunc non tincidunt erat. Donec quis enim quis nibh fermentum sollicitudin quis porttitor felis.
 
 ## das

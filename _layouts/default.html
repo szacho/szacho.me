@@ -9,7 +9,8 @@
     </main>
 
     {% if page.layout == 'article' %}
-      {% include sharing.html %}
+      <script src="{{ '/assets/js/picturefill.min.js' | absolute_url }}"></script>
+      <script src="{{ '/assets/js/lazysizes.min.js' | absolute_url }}"></script>
     {% endif %}
     {% if page.math %}
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>

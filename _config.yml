@@ -34,6 +34,7 @@ markdown: kramdown
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-responsive-image
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -48,3 +49,20 @@ exclude:
   - vendor/ruby/
   - README.md
 include: [ _pages ]
+
+responsive_image:
+  template: _includes/responsive-image.html
+  default_quality: 90
+  sizes:
+    - width: 20
+      quality: 10
+    - width: 480
+      quality: 80
+    - width: 800
+    - width: 1400
+      quality: 90
+  auto_rotate: false
+  base_path: assets/images
+  output_path_format: assets/images/resized/%{width}/%{basename}
+  save_to_source: false
+  cache: false
