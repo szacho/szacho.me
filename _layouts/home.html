@@ -2,13 +2,14 @@
 layout: default
 permalink: /
 ---
-<ul>
+
   {% assign posts = site.posts | sort: 'date' | group_by_exp:"item", "item.date | date: '%Y'" %}
 
   {% for year in posts reversed %}
     <h2 class="m-header">{{ year.name }}</h2>
+    <ul>
     {% for post in year.items reversed %}
       {% include entry.html %}
     {% endfor %}
+    </ul>
   {% endfor %}
-</ul>
