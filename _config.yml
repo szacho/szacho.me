@@ -15,12 +15,18 @@
 # in the templates via {{ site.myvariable }}.
 title: Think before you die
 description: >
-  This blog concerns versatile subjects pulling apart common notions with the skill of a surgeon.
-  Furthermore, it is also a travel and adventure journal kept by backpacker, explorer and digital nomad.
+  This blog is about developing modern web applications, machine learning and technology.
+  Furthermore, it is a travel and adventure journal kept by backpacker, explorer and digital nomad wannabe.
 baseurl: ""
 url: https://szacho.me
 lang: en
 permalink: /:title/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/default.jpeg
 
 github:
   username: szacho
