@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Amazing photos from Balkans
+title: Hitchhiking through Balkans
 date: 2018-08-31 18:03:45 +0200
 categories: travel photography
 comments: true
@@ -28,3 +28,34 @@ Again, we arrived in Thessaloniki at night. A cool and friendly guy led us direc
 In Albania we were allowed by the guard to camp in the center of Nature Park Blue Eye almost above this crystal water!
 
 A full journal with catchy stories and awesome adventures is coming soon ;)
+
+Wrocław
+Czechowice-Dziedzice: Kawa, kayak-polo, niecodzienna  przesiadka, fontanna, zamknięte sklepy, impreza dziewczyn z lidla, pizzeria
+
+Budapest: spotkanie z Niemką i z Sarą, zostawienie bagaży na dworcu, frisbee na wyspie Małgorzaty, pizza wegańska, metro, spacer
+Arad: w pociągu -do rozmawiamy z młodymi Rumunami, co byli na sziget festival, wymieniamy się muzyką, próbujemy wymówić trudne wyrazy w ich języku; noc, pęknięty hydrant tryskający na ulicę, basen(co okazał się zamknięty), spanie w parku, dzikie psy, hotel dla bogatych (bankomat), basen za 8zł, pranie, stare tramwaje, autostop do Cluju
+
+Oradea / Cluj-Napoca (hitchhiking): Dani z żoną, tir, wyłączony ogranicznik prędkości (i licznik), wysiadka przed clujem, dziewczyny idące na festiwal, chcą podjechać taksówką kilometr - zostawiamy je, idziemy do sklepu na ostatnią chwilę, potem do lasu, auto oferujące pomoc, wędrówka nocą nawiedzonym lasem, impreza w środku lasu, prośba o fajki, wdępnąłem w błoto, nie docieramy do drzew ze zdjęcia, obóz, poranna herbata, arek rzuca nożami, wracamy, ogród botaniczny, wykupione miejscówki na pociąg, owce
+
+Brasov (coach)
+Bucharest: zmęczenie, kawa w klimatyzowanej kawiarni, brud, kurz, oczekiwanie, jakiś rumun troluje chińczyka w kiblu
+Sofia: noc,masywne, potężne miasto, śpimy w parku (jak w lesie), 
+Kulata (hitchhiking), Thessaloniki (hitchhiking): 
+Grevena (hitchhiking): andzia w aucie między bramkami na autostradzie
+Ioannina (coach)
+Kakavia (coach)
+Blue eye (taxi)
+Sarande (hitchhiking)
+Ksamil (coach)
+Tirana (coach)
+Shkoder (hitchhiking)
+Podgorica (hitchhiking)
+Herceg Novi (coach)
+Split (coach)
+Zagreb
+Jesenice
+Bled
+Jesenice
+Wien
+Katowice
+Wrocław

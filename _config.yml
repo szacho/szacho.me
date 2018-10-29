@@ -15,8 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Think before you die
 description: >
-  This blog is about developing modern web applications, machine learning and technology.
-  Furthermore, it is a travel and adventure journal kept by backpacker, explorer and digital nomad wannabe.
+  This blog concerns everything I want to write about.
 baseurl: ""
 url: https://szacho.me
 lang: en
