@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 const Entry = ({ post }) => (
-  <div>
     <li className='blog-entry l-flex'>
         <h3 className='blog-entry--title'>
             <Link to={ post.frontmatter.path } className='blog-entry--link'>{ post.frontmatter.title }</Link>
@@ -10,7 +9,6 @@ const Entry = ({ post }) => (
             { post.frontmatter.tags.map(tag => renderTag(tag)) }
         </ul>
     </li>
-  </div>
 )
 export default Entry
 

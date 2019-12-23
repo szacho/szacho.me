@@ -2,8 +2,11 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-function renderImage(props) {
+function renderImage(props, style, alt) {
     let normalizedProps = props
+    if (style === undefined) {
+        style = {}
+    }
     if (props.fluid && props.fluid.presentationWidth) {
       normalizedProps = {
         ...props,
@@ -14,11 +17,14 @@ function renderImage(props) {
         },
       }
     }  
-    return <Img {...normalizedProps} fluid={props.node.childImageSharp.fluid} />
+    let styles = {width: '300px', margin: '0 auto'};
+    return <Img {...normalizedProps} fluid={props.node.childImageSharp.fluid} style={style} alt={alt} />
 }
 
-const Image = ({ imagePath }) => (
-    <StaticQuery
+function Image(props) {
+    console.log(props)
+    return (
+        <StaticQuery
         query={graphql`
             query {
                 images: allFile(filter:{ extension: { regex: "/jpeg|jpg|png|gif/"}}) {
@@ -37,10 +43,11 @@ const Image = ({ imagePath }) => (
                 }
             }
         `}
-        render={({ images }) => renderImage(images.edges.find(image => image.node.relativePath === imagePath)
+        render={({ images }) => renderImage(images.edges.find(image => image.node.relativePath === props.imagePath), props.styles, props.alt
         )}
     />
-)
+)}
+
 
 
 

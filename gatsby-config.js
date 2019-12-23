@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `szacho.xyz`,
-    description: `Science is a form of art and I write about it.`,
+    title: `Think before you die*`,
+    description: `Science is a form of art.`,
     author: `@szacho`,
   },
   plugins: [
