@@ -6,6 +6,7 @@ import { MDXProvider } from "@mdx-js/react"
 import SEO from '../components/seo'
 import Layout from './layout'
 import Image from '../components/customImage'
+import { Disqus } from 'gatsby-plugin-disqus'
 
 const shortcodes = {
   Image
@@ -14,8 +15,14 @@ const shortcodes = {
 export default function Template({
     data,
 }) {
+
     const { mdx } = data // data.markdownRemark holds your post data
     const { frontmatter, body } = mdx
+    let disqusConfig = {
+      url: `https://szacho.github.io/${frontmatter.path}`,
+      identifier: frontmatter.path,
+      title: frontmatter.title,
+    }
     return (
       <Layout>
         <SEO title={ frontmatter.title } />
@@ -36,6 +43,7 @@ export default function Template({
                 <MDXRenderer>{body}</MDXRenderer>
               </MDXProvider>
             </section>
+        <Disqus config={disqusConfig} />
         </article>
       </Layout>
     )

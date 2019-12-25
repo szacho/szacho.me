@@ -3,6 +3,7 @@ module.exports = {
     title: `Think before you die*`,
     description: `Science is a form of art.`,
     author: `@szacho`,
+    siteUrl: 'https://szacho.github.io/'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -68,6 +69,12 @@ module.exports = {
         // Disable the loading spinner.
         showSpinner: false,
       },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `szachniewicz`
+      }
     },
   ],
 }

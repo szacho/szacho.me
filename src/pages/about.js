@@ -4,6 +4,11 @@ import Layout from "../templates/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import styled from 'styled-components'
+
+const SmallParagraph = styled.p`
+  font-size: 1.6rem;
+`
 
 const About = ({ data }) => (
   <Layout>
@@ -12,14 +17,10 @@ const About = ({ data }) => (
       <h2 className='m-header'>About</h2>
       <section className='blog-article--content'>
         <p>
-          This is my personal space in the internet and it contains mostly science and math related stuff.
+          My name is Michael Szachniewicz, a student of applied mathematics from Wrocław (Poland). This is my personal space in the internet and I will post here mostly math and science stuff, thereby documenting my road to get a job in data science. 
         </p>
         <p>
-          Some other nonsense may appear due to my interests and hobbies. 
-          I love art and science and try to mix them together believing that one is a form of another. I am a climber, gymnastics amateur, backpacker and student of applied mathematics, so do not be surprised if you encounter a post with differential equations after reading stories of hitchhiking through Balkans. 
-        </p>
-        <p>
-          *
+          If you want to contact me for any reason related to similar field of study, I am open to have a chat - get in touch vie email below!
         </p>
       </section>
       <h2 className='m-header'>Contact</h2>
@@ -32,6 +33,9 @@ const About = ({ data }) => (
             <Img fixed={data.mailIcon.childImageSharp.fixed} style={{ position: 'relative', top: '5px', left: '-3px' }}/> michal@szachniewicz.xyz
           </li>
         </ul>
+        <SmallParagraph>
+          *listen to my favourite band <a href="https://youtu.be/kMaF0YKq3gU">Bad Religion - Before You Die</a>
+        </SmallParagraph>
       </section>
       
     </article>

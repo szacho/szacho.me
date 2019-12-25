@@ -22,7 +22,6 @@ function renderImage(props, style, alt) {
 }
 
 function Image(props) {
-    console.log(props)
     return (
         <StaticQuery
         query={graphql`

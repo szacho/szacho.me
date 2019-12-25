@@ -4,9 +4,8 @@ const Category = ({ category, posts }) => {
     posts = posts.filter(post => post.tags.includes(category) )
     return (
         <ul className='category'>
-            <h2 id='travel' className='category--name'>{ category }</h2>
+            <h2 id={category} className='category--name'>{ category }</h2>
             { posts.map(post => renderEntryPost(post)) }
-
         </ul>
     )
 }

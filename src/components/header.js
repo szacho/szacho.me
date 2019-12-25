@@ -10,9 +10,9 @@ const Header = ({ siteTitle }) => (
         <li className="nav--item">
           <Link className="nav--link" to="/about" rel="bookmark">about</Link>
         </li>
-        <li className="nav--item">
+        {/* <li className="nav--item">
           <Link className="nav--link" to="/projects" rel="bookmark">projects</Link>
-        </li>
+        </li> */}
         {/* <li className="nav--item">
           <Link className="nav--link" to="/feed.xml" rel="bookmark">feed</Link>
         </li> */}
