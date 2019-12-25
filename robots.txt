@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://szacho.github.io/sitemap.xml
+Host: https://szacho.github.io
