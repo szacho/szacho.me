@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMdx
-  console.log(edges)
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
