@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-function renderImage(props, style, alt) {
+function renderImage(props, style, alt, caption) {
     let normalizedProps = props
     if (style === undefined) {
         style = {}
@@ -17,8 +17,12 @@ function renderImage(props, style, alt) {
         },
       }
     }  
-    let styles = {width: '300px', margin: '0 auto'};
-    return <Img {...normalizedProps} fluid={props.node.childImageSharp.fluid} style={style} alt={alt} />
+    return (
+        <figure>
+            <Img {...normalizedProps} fluid={props.node.childImageSharp.fluid} style={style} alt={alt} />
+            <figcaption>{caption}</figcaption>
+        </figure>
+    )
 }
 
 function Image(props) {
@@ -42,7 +46,7 @@ function Image(props) {
                 }
             }
         `}
-        render={({ images }) => renderImage(images.edges.find(image => image.node.relativePath === props.imagePath), props.styles, props.alt
+        render={({ images }) => renderImage(images.edges.find(image => image.node.relativePath === props.imagePath), props.styles, props.alt, props.caption
         )}
     />
 )}
