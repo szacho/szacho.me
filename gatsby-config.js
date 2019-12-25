@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Think before you die*`,
-    description: `Science is a form of art.`,
+    description: `The personal site of Michael Szachniewicz.`,
     author: `@szacho`,
     siteUrl: 'https://szacho.github.io/'
   },
@@ -75,6 +75,25 @@ module.exports = {
       options: {
         shortname: `szachniewicz`
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-155041834-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: false,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+      },
     },
   ],
 }
