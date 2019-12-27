@@ -70,6 +70,7 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"/>
+      <meta name="google-site-verification" content="LX99E5UGWWaESDph_SUK39OgChZFbtfuZtxIHpYYC8k" />
       
     </Helmet>
   )
