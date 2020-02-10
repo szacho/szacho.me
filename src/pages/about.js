@@ -17,10 +17,10 @@ const About = ({ data }) => (
       <h2 className='m-header'>About</h2>
       <section className='blog-article--content'>
         <p>
-          My name is Michael Szachniewicz, a student of applied mathematics from Wrocław (Poland). This is my personal space in the internet and I will post here mostly math and science stuff, thereby documenting my road to get a job in data science. Besides that I am a climber, amateur gymnasts, and traveler, thus some posts about my interests may appear here as well. 
+          My name is Michael Szachniewicz, a student of applied mathematics from Wrocław (Poland). On this blog I will post mostly math and science stuff, thereby documenting my development in artificial intelligence and data science. Besides that I am a climber, amateur gymnast and traveler, thus some posts about my interests may appear here as well. 
         </p>
         <p>
-          If you want to contact me for any reason related to similar field of study, I am open to have a chat - get in touch vie email below!
+          If you want to contact me for any reason related to similar field of study, I am open to have a chat - get in touch via email below!
         </p>
       </section>
       <h2 className='m-header'>Contact</h2>
