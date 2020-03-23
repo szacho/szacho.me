@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Think before you die*`,
-    description: `The personal site of Michael Szachniewicz.`,
+    title: `Michal Szachniewicz`,
+    description: `Aspiring data scientist, keen on AI. Applied mathematics UG @ Wrocław University of Technology. I write about machine learning, my projects and travelling.`,
     author: `@szacho`,
     siteUrl: 'https://szacho.github.io/'
   },

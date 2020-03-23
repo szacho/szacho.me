@@ -27,17 +27,22 @@ function sortByYear(posts) {
   })
 }
 
+function displayPosts(edges) {
+  let posts = edges.filter(edge => !edge.node.frontmatter.project)
+  return posts.map(post => <Entry key={post.node.id} post={post.node} />)
+}
+
 
 const IndexPage = ({
   data: {
     allMdx: { edges },
   },
 }) => {
-  sortByYear(edges)
   return (
     <Layout>
       <SEO title="Home" />
-      {sortByYear(edges)}
+      <h2 className='m-header'>Blog</h2>
+      {displayPosts(edges)}
     </Layout>
   )
 }
@@ -55,6 +60,7 @@ export const pageQuery = graphql`
             path
             title
             tags
+            project
           }
         }
       }
