@@ -5,7 +5,7 @@ const Sidebar = () => (
   <aside id="sidebar" className="sidebar">
     <div className="m-sticky-wrapper">
 
-    <img src="https://via.placeholder.com/100" alt="Photo of blog's author" />
+    <img src="https://via.placeholder.com/100" alt="Blog's author portrait" />
     <h1 className="sidebar--name">Michal Szachniewicz</h1>
     <p className="sidebar--description">
         Aspiring data scientist, keen on AI. 

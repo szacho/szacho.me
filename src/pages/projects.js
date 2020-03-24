@@ -19,7 +19,9 @@ const ProjectsPage = ({
     <Layout>
       <SEO title="Projects" />
       <h2 className='m-header'>Projects</h2>
-      {displayProjects(edges)}
+      <ul>
+        {displayProjects(edges)}
+      </ul>
 
     </Layout>
   )
@@ -39,6 +41,8 @@ export const pageQuery = graphql`
             title
             tags
             project
+            short
+            image
           }
         }
       }

@@ -1,14 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
+import BackgroundImage from './backgroundImage'
+
 const Entry = ({ post }) => (
-    <li className='blog-entry l-flex'>
+<BackgroundImage tagName='li' fileName={post.frontmatter.image}>
+    <div className="blog-entry">
+        <div className="l-flex" style={{justifyContent: 'space-between', width: '100%'}}>
+            <time className='blog-entry--date' itemProp='datePublished'>
+                {post.frontmatter.date}
+            </time>
+            <ul className='blog-entry--categories l-flex'>
+                { post.frontmatter.tags.map(tag => renderTag(tag)) }
+            </ul>
+        </div>
         <h3 className='blog-entry--title'>
             <Link to={ post.frontmatter.path } className='blog-entry--link'>{ post.frontmatter.title }</Link>
         </h3>
-        <ul className='blog-entry--categories l-flex'>
-            { post.frontmatter.tags.map(tag => renderTag(tag)) }
-        </ul>
-    </li>
+        <p className='blog-entry--excerpt'>
+            {post.frontmatter.short}&hellip;
+        </p>
+        <Link to={ post.frontmatter.path } className='blog-entry--readmore'>Read more &raquo;</Link>
+    </div>
+</BackgroundImage>
 )
 export default Entry
 

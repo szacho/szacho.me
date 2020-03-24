@@ -29,7 +29,7 @@ export default function Template({
         <article className='blog-article'>
             <header className='blog-article--header l-flex'>
               <div className='l-flex blog-article--header-wrapper'>
-                  <time className='blog-article--date' dateTime='2017-05-17 14:42:24 +0200' itemProp='datePublished'>
+                  <time className='blog-article--date' itemProp='datePublished'>
                     {frontmatter.date}
                   </time>
                   <ul className='l-flex blog-article--tags'>
