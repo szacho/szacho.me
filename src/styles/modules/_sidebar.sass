@@ -24,9 +24,39 @@
     color: $c-base-font
     text-decoration: none
     &:hover
-        color: $c-tags
+        color: $c-link-highlight
         text-decoration: underline
 
 .sidebar--nav-link-active
     font-weight: bold
     text-decoration: underline
+
+.sidebar--social-media
+    width: 50%
+    margin: 0 auto
+    margin-top: 25px
+    display: flex
+    justify-content: space-around
+    li:not(:first-child)
+        margin-left: 10px
+    a
+        transition: 0.2s all ease-out
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 8px
+        border: 1.2px solid $c-lighter-font
+        border-radius: 50%
+        width: 20px
+        height: 20px
+        font-size: 2rem
+        color: $c-article-font
+        &:hover
+            color: $c-link-highlight
+            // border: 1.2px solid $c-link-highlight
+
+.sidebar--note
+    color: $c-lighter-font
+    font-size: 1.4rem
+    text-align: center
+    margin-top: 30px

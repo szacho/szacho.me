@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
 
+import gitIcon from '../images/github.png'
+
 const Sidebar = () => (
   <aside id="sidebar" className="sidebar">
     <div className="m-sticky-wrapper">
@@ -9,7 +11,7 @@ const Sidebar = () => (
     <h1 className="sidebar--name">Michal Szachniewicz</h1>
     <p className="sidebar--description">
         Aspiring data scientist, keen on AI. 
-        Applied mathematics UG @ Wrocław University of Technology. 
+        Applied mathematics UG @ Wroclaw University of Science and Technology. 
         I write about machine learning, my projects and travelling. 
     </p>
     <nav className='sidebar--nav'>
@@ -29,7 +31,21 @@ const Sidebar = () => (
             
         </ul>
     </nav>
-
+    <ul className="sidebar--social-media">
+        <li>
+            <a href='https://github.com/szacho/'><i class="fab fa-github"></i></a>    
+        </li>
+        <li>
+            <a href='https://www.kaggle.com/szacho/'><i className="fab fa-kaggle"></i></a>    
+        </li>
+        <li>
+            <a href='https://www.linkedin.com/in/micha%C5%82-szachniewicz-23b6351a5/'><i className="fab fa-linkedin-in"></i></a>    
+        </li>
+        <li>
+            <a href='mailto:mszachniewicz@outlook.com'><i className="fa fa-at"></i></a>    
+        </li>
+    </ul>
+    <p className="sidebar--note">&copy; M. Szachniewicz 2020</p>
     </div>
   </aside>
 )

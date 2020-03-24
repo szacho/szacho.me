@@ -46,8 +46,6 @@ export default function({ fileName, children, className, tagName }) {
                     backgroundColor: `transparent`,
                     backgroundSize: `cover`,
                     backgroundPosition: `center center`,
-                    display: `flex`,
-                    alignItems: `center`,
                 }}>
                 {children}
             </BackgroundImage>

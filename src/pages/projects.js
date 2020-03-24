@@ -2,12 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../templates/layout"
-import Entry from "../components/entry"
+import ProjectEntry from "../components/projectEntry"
 import SEO from "../components/seo"
 
 function displayProjects(edges) {
   let projects = edges.filter(edge => edge.node.frontmatter.project)
-  return projects.map(project => <Entry key={project.node.id} post={project.node} />)
+  return projects.map(project => <ProjectEntry key={project.node.id} project={project.node} />)
 }
 
 const ProjectsPage = ({

@@ -71,7 +71,7 @@ function SEO({ description, lang, meta, title }) {
     >
       <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"/>
       <meta name="google-site-verification" content="LX99E5UGWWaESDph_SUK39OgChZFbtfuZtxIHpYYC8k" />
-      
+      <script src="https://kit.fontawesome.com/e2db107e90.js" crossorigin="anonymous"></script>
     </Helmet>
   )
 }
