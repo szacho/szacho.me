@@ -3,6 +3,7 @@ module.exports = {
     title: `Michal Szachniewicz`,
     description: `Aspiring data scientist, keen on AI. Applied mathematics UG @ Wrocław University of Technology. I write about machine learning, my projects and travelling.`,
     author: `@szacho`,
+    twitterHandle: '@szacho72',
     siteUrl: 'https://szacho.github.io/'
   },
   plugins: [

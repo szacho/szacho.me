@@ -26,7 +26,7 @@ const About = ({ data }) => (
             <a href="https://github.com/szacho"><Img fixed={data.githubIcon.childImageSharp.fixed} style={{ position: 'relative', top: '5px', left: '-3px' }}/> github</a>
           </li>
           <li>
-            <Img fixed={data.mailIcon.childImageSharp.fixed} style={{ position: 'relative', top: '5px', left: '-3px' }}/> michal@szachniewicz.xyz
+            <Img fixed={data.mailIcon.childImageSharp.fixed} style={{ position: 'relative', top: '5px', left: '-3px' }}/> mszachniewicz@outlook.com
           </li>
         </ul>
       </section>

@@ -6,6 +6,7 @@ import { MDXProvider } from "@mdx-js/react"
 import SEO from '../components/seo'
 import Layout from './layout'
 import Image from '../components/customImage'
+import Share from '../components/shareButtons'
 import { Disqus } from 'gatsby-plugin-disqus'
 
 const shortcodes = {
@@ -16,10 +17,11 @@ export default function Template({
     data,
 }) {
 
-    const { mdx } = data // data.markdownRemark holds your post data
+    const { mdx, site } = data // data.markdownRemark holds your post data
+    const { siteMetadata } = site
     const { frontmatter, body } = mdx
     let disqusConfig = {
-      url: `https://szacho.github.io/${frontmatter.path}`,
+      url: `${siteMetadata.siteUrl}${frontmatter.path}`,
       identifier: frontmatter.path,
       title: frontmatter.title,
     }
@@ -42,6 +44,16 @@ export default function Template({
               <MDXProvider components={shortcodes}>
                 <MDXRenderer>{body}</MDXRenderer>
               </MDXProvider>
+              <Share
+                socialConfig={{
+                  twitterHandle: siteMetadata.twitterHandle,
+                  config: {
+                    url: `${siteMetadata.siteUrl}${frontmatter.path}`,
+                    title: frontmatter.title,
+                  },
+                }}
+                tags={frontmatter.tags}
+              />
             </section>
         <Disqus config={disqusConfig} />
         </article>
@@ -59,6 +71,12 @@ export const pageQuery = graphql`
         tags
       }
       body
+    }
+    site {
+      siteMetadata {
+        siteUrl
+        twitterHandle
+      }
     }
   }
 `

@@ -1,7 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
-
-import gitIcon from '../images/github.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faGithub, faKaggle, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faAt } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => (
   <aside id="sidebar" className="sidebar">
@@ -33,16 +34,16 @@ const Sidebar = () => (
     </nav>
     <ul className="sidebar--social-media">
         <li>
-            <a href='https://github.com/szacho/'><i class="fab fa-github"></i></a>    
+            <a href='https://github.com/szacho/'><FontAwesomeIcon icon={faGithub} /></a>    
         </li>
         <li>
-            <a href='https://www.kaggle.com/szacho/'><i className="fab fa-kaggle"></i></a>    
+            <a href='https://www.kaggle.com/szacho/'><FontAwesomeIcon icon={faKaggle} /></a>    
         </li>
         <li>
-            <a href='https://www.linkedin.com/in/micha%C5%82-szachniewicz-23b6351a5/'><i className="fab fa-linkedin-in"></i></a>    
+            <a href='https://www.linkedin.com/in/micha%C5%82-szachniewicz-23b6351a5/'><FontAwesomeIcon icon={faLinkedinIn} /></a>    
         </li>
         <li>
-            <a href='mailto:mszachniewicz@outlook.com'><i className="fa fa-at"></i></a>    
+            <a href='mailto:mszachniewicz@outlook.com'><FontAwesomeIcon icon={faAt} /></a>    
         </li>
     </ul>
     <p className="sidebar--note">&copy; M. Szachniewicz 2020</p>
