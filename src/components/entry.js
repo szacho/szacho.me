@@ -4,7 +4,7 @@ import BackgroundImage from './backgroundImage'
 
 const Entry = ({ post }) => (
 <BackgroundImage className='blog-entry' tagName='li' fileName={post.frontmatter.image}>
-    <div className="l-flex" style={{justifyContent: 'space-between', width: '100%'}}>
+    <div className="l-flex blog-entry--meta" style={{justifyContent: 'space-between', width: '100%'}}>
         <time className='blog-entry--date' itemProp='datePublished'>
             {post.frontmatter.date}
         </time>
