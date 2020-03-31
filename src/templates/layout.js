@@ -6,6 +6,8 @@ import Sidebar from '../components/sidebar'
 import SlideMenu from '../components/slideMenu'
 import Navbar from '../components/navbar'
 
+import "katex/dist/katex.min.css"
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

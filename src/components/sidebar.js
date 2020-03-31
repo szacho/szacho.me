@@ -28,13 +28,13 @@ const Sidebar = ({id}) => (
     <nav className='sidebar--nav'>
         <ul className="sidebar--nav-ul">
             <li className="sidebar--nav-item">
-                <Link className="sidebar--nav-link" activeClassName='sidebar--nav-link-active' to="/about" rel="bookmark">about</Link>
+                <Link className="sidebar--nav-link" activeClassName='sidebar--nav-link-active' to="/about/" rel="bookmark">about</Link>
             </li>
             <li className="sidebar--nav-item">
                 <Link className="sidebar--nav-link" activeClassName='sidebar--nav-link-active' to="/" rel="bookmark">blog</Link>
             </li>
             <li className="sidebar--nav-item">
-                <Link className="sidebar--nav-link" activeClassName='sidebar--nav-link-active' to="/projects" rel="bookmark">projects</Link>
+                <Link className="sidebar--nav-link" activeClassName='sidebar--nav-link-active' to="/projects/" rel="bookmark">projects</Link>
             </li>
             {/* <li className="nav--item">
             <Link className="nav--link" to="/feed.xml" rel="bookmark">feed</Link>

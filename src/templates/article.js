@@ -8,9 +8,12 @@ import Layout from './layout'
 import Image from '../components/customImage'
 import Share from '../components/shareButtons'
 import { Disqus } from 'gatsby-plugin-disqus'
+import { InlineMath, BlockMath } from 'react-katex';
 
 const shortcodes = {
-  Image
+  Image,
+  InlineMath,
+  BlockMath
 }
 
 export default function Template({
