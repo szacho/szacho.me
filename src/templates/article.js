@@ -28,7 +28,7 @@ export default function Template({
       identifier: frontmatter.path,
       title: frontmatter.title,
     }
-    console.log(mdx)
+    console.log(site)
     return (
       <Layout>
         <SEO title={ frontmatter.title } image={ frontmatter.image } description={frontmatter.short} />
