@@ -2,11 +2,12 @@ import React from "react"
 
 import Layout from "../templates/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
-import { graphql } from "gatsby"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faAt } from '@fortawesome/free-solid-svg-icons';
 
-const About = ({ data }) => (
+const About = () => (
   <Layout>
     <SEO title="About" />
     <article className='blog-article'>
@@ -23,10 +24,10 @@ const About = ({ data }) => (
       <section className='blog-article--content'>
         <ul style={{listStyleType: 'none'}}>
           <li>
-            <a href="https://github.com/szacho"><Img fixed={data.githubIcon.childImageSharp.fixed} style={{ position: 'relative', top: '5px', left: '-3px' }}/> github</a>
+            <FontAwesomeIcon icon={faGithub} /><a href="https://github.com/szacho"> github</a>
           </li>
           <li>
-            <Img fixed={data.mailIcon.childImageSharp.fixed} style={{ position: 'relative', top: '5px', left: '-3px' }}/> mszachniewicz@outlook.com
+            <FontAwesomeIcon icon={faAt} /> mszachniewicz@outlook.com
           </li>
         </ul>
       </section>
@@ -37,22 +38,3 @@ const About = ({ data }) => (
 )
 
 export default About
-
-export const query = graphql`
-  query {
-    githubIcon: file(relativePath: { eq: "github.png" }) {
-      childImageSharp {
-        fixed(width: 20, height: 20) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    },
-    mailIcon: file(relativePath: { eq: "mail.png" }) {
-      childImageSharp {
-        fixed(width: 20, height: 20) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`

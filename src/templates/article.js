@@ -28,9 +28,10 @@ export default function Template({
       identifier: frontmatter.path,
       title: frontmatter.title,
     }
+    console.log(mdx)
     return (
       <Layout>
-        <SEO title={ frontmatter.title } />
+        <SEO title={ frontmatter.title } image={ frontmatter.image } description={frontmatter.short} />
         <article className='blog-article'>
             <header className='blog-article--header l-flex'>
               <div className='l-flex blog-article--header-wrapper'>
@@ -72,6 +73,8 @@ export const pageQuery = graphql`
         path
         title
         tags
+        image
+        short
       }
       body
     }

@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 
 function displayPosts(edges) {
   let posts = edges.filter(edge => !edge.node.frontmatter.project)
-  console.log(posts)
   return posts.map(post => <Entry key={post.node.id} post={post.node} />)
 }
 

@@ -18,7 +18,6 @@ const Sidebar = ({id}) => (
 
     <Image imagePath="portrait.JPG" alt="Blog's author portrait." styles={imageStyles}/>
 
-    {/* <img src="https://via.placeholder.com/100" alt="Blog's author portrait" /> */}
     <h1 className="sidebar--name">Michal Szachniewicz</h1>
     <p className="sidebar--description">
         Aspiring data scientist, keen on AI. 

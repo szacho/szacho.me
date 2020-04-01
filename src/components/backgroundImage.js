@@ -24,7 +24,6 @@ export default function({ fileName, children, className, tagName }) {
                 }
             `
         );
-    console.log(data)
     const image = data.placeholderImage.edges.find(
         ({ node }) => node.relativePath === fileName
     ).node;
